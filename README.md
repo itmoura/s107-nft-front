@@ -1,13 +1,12 @@
 <h1 align="center"> Front-end OmNaNFT </h1>
 
 ## Descrição do Projeto
+
 <p>O projeto consiste em um site desenvolvido em React voltado para o mundo de NFT, em que você pode criar, ver, comprar, vender, negociar, etc... suas NFTs</p>
 
 <h4 align="center"> 
 	:construction:  Em construção :construction:
 </h4>
- 
-
 
 
 ## 🛠 Tecnologias
@@ -16,9 +15,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [ReactJS](https://pt-br.reactjs.org/)
 
+## Atribuição dos vetores utilizados projeto
 
+<a href="https://www.flaticon.com/br/icones-gratis/nft" title="nft ícones">Nft ícones criados por Vector Squad - Flaticon</a>
 
 ## 👥 Autores
+
 <table  style="text-align:center; border: none" >
 <tr>
 
@@ -33,7 +35,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <img style="border-radius: 20%;" src="https://github.com/ItaloRez.png" width="120px;" alt="autor"/><br><strong> Ítalo de Rezende </strong>
 </a>
 </td>
-
 
 </tr>
 </table>
