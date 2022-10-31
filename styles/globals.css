@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sidebar-icon {
+    @apply relative ml-6 
+    mb-2 flex h-12 cursor-pointer items-center gap-3 p-2 
+  text-white transition-all duration-300 ease-linear first:mt-2 hover:text-primary;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute left-14 m-2 w-auto min-w-max origin-left
+    scale-0 rounded-md 
+    bg-gray-900 p-2 
+    text-xs font-bold
+    text-white shadow-md transition-all duration-100;
+  }
+
+  .navbar-link {
+    @apply mr-4 inline-block cursor-pointer text-base font-bold text-white
+    transition-all duration-300 ease-linear
+    hover:text-primary;
+  }
+}
