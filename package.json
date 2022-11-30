@@ -16,9 +16,11 @@
     "@heroicons/react": "^2.0.12",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
+    "axios": "^1.2.0",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.40.0",
     "react-icons": "^4.6.0",
     "react-toastify": "^9.1.1"
   },
