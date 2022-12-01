@@ -5,7 +5,7 @@
 <p>O projeto consiste em um site desenvolvido em React voltado para o mundo de NFT, em que você pode criar, ver, comprar, vender, negociar, etc... suas NFTs</p>
 
 <h4 align="center"> 
-	:construction:  Em construção :construction:
+	:white_check_mark:  Finalizado :white_check_mark:
 </h4>
 
 ## 🛠 Tecnologias
