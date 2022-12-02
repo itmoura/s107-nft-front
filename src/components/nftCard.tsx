@@ -48,7 +48,7 @@ export const NftCard = ({ nft, myNft = false }: NftCardProps) => {
 
   const handleRemoveFromSale = async () => {
     try {
-      await editStatusNft(nft.nftId, "SOLD");
+      await editStatusNft(nft.nftId, "INACTIVE");
       await getNftsRequest();
       await getMyNfts();
       toast.success("NFT removido da venda com sucesso!");
@@ -86,21 +86,19 @@ export const NftCard = ({ nft, myNft = false }: NftCardProps) => {
         </div>
 
         <div className="align-end flex w-full justify-center">
-          {(!nft.status || nft.status === "FOR_SALE") &&
-            !myNft &&
-            nft.ownerId !== user?.userId && (
-              <div
-                className="inline-block cursor-pointer rounded-sm bg-secondary py-2 px-4 font-semibold text-white transition duration-300 ease-in-out hover:bg-primary"
-                onClick={() => {
-                  if (!user) {
-                    return handleOpenMenuLogin();
-                  }
-                  buyNftRequest();
-                }}
-              >
-                <a>Comprar</a>
-              </div>
-            )}
+          {nft.status === "FOR_SALE" && !myNft && nft.ownerId !== user?.userId && (
+            <div
+              className="inline-block cursor-pointer rounded-sm bg-secondary py-2 px-4 font-semibold text-white transition duration-300 ease-in-out hover:bg-primary"
+              onClick={() => {
+                if (!user) {
+                  return handleOpenMenuLogin();
+                }
+                buyNftRequest();
+              }}
+            >
+              <a>Comprar</a>
+            </div>
+          )}
 
           {nft.status === "FOR_SALE" && myNft && (
             <div
@@ -114,7 +112,7 @@ export const NftCard = ({ nft, myNft = false }: NftCardProps) => {
           )}
 
           <div className="flex flex-col items-center gap-3">
-            {myNft && nft.status === "SOLD" && (
+            {myNft && (nft.status === "SOLD" || nft.status !== "FOR_SALE") && (
               <div
                 className="inline-block cursor-pointer rounded-sm bg-secondary py-2 px-4 font-semibold text-white transition duration-300 ease-in-out hover:bg-primary"
                 onClick={handleForSale}
@@ -129,7 +127,7 @@ export const NftCard = ({ nft, myNft = false }: NftCardProps) => {
               </div>
             )}
 
-            {myNft &&
+            {/* {myNft &&
               nft.ownerId === user?.userId &&
               nft.status !== "FOR_SALE" && (
                 <div
@@ -138,7 +136,7 @@ export const NftCard = ({ nft, myNft = false }: NftCardProps) => {
                 >
                   <a>Colocar para venda</a>
                 </div>
-              )}
+              )} */}
           </div>
         </div>
       </div>
