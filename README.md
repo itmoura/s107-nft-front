@@ -21,8 +21,8 @@ As principais tecnologias que foram usadas na construção do projeto:
 
 Este projeto é divido em duas partes:
 
-1. Frontend (pasta frontend)
-2. Backend (pasta backend)
+1. Frontend
+2. Backend
 
 💡O Frontend precisa que o Backend esteja sendo executado para funcionar.
 
@@ -32,7 +32,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Docker](https://www.docker.com/).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
-## 🎲 Rodando o Frontend (pasta frontend)
+## 🎲 Rodando o Frontend
 
 ```bash
 # Clone este repositório
@@ -52,9 +52,10 @@ $ npm run build
 
 ```
 
-## 🎲 Rodando o Backend (pasta backend)
+## 🎲 Rodando o Backend
 
 ```bash
+# No mesmo repositório do Frontend, abra outro terminal e execute os seguintes comandos:
 # Com o Docker aberto, execute o comando abaixo para subir o container do banco de dados e o container do backend
 $ docker-compose up -d
 ```
