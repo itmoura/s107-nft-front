@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 services:
   postgres:
     image: postgres:latest
@@ -12,7 +12,6 @@ services:
     image: itmoura/nft-engine-docker:latest
     container_name: nft-engine
     privileged: true
-    restart: always
     ports:
       - "8081:8081"
     depends_on:
@@ -21,10 +20,26 @@ services:
   nft-app:
     image: itmoura/nft-app-docker:latest
     container_name: nft-app
-    restart: always
     privileged: true
     ports:
       - "8080:8080"
     depends_on:
       - postgres
       - nft-engine
+
+  nft-jenkins:
+    image: itmoura/nft-jenkins:latest
+    container_name: nft-jenkins
+    privileged: true
+    ports:
+      - "9090:8080"
+      - "50000:50000"
+
+  nft-front:
+    image: itmoura/nft-front:latest
+    container_name: nft-front
+    privileged: true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nft-app

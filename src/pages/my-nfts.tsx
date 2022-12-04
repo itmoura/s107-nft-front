@@ -12,7 +12,7 @@ export default function MyNfts() {
   return (
     <>
       <Head>
-        <title>OmNaNFT - Minhas NFT's</title>
+        <title>OmNaNFT - Minhas NFT&apos;s</title>
       </Head>
       <Page>
         <div className="p-10">
